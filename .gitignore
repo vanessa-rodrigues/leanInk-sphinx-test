@@ -1,0 +1,7 @@
+/build
+/_build
+/lean_packages/*
+!/lean_packages/manifest.json
+/LeanSource/*.css
+/LeanSource/*.js
+/LeanSource/*.html
