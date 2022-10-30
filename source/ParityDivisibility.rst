@@ -3,4 +3,4 @@
 Parity and divisibility
 =======================
 
-.. include:: ParityDivisibility/ModularArithmeticTheory.inc
+.. include:: ParityDivisibility/ModularArithmeticTheory-code-block.inc

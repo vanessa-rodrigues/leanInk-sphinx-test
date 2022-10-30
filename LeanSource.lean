@@ -1,1 +1,1 @@
-import LeanSource.ModularArithmetic
+import LeanSource.ModularArithmeticTheory
