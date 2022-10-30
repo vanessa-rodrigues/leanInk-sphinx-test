@@ -2,7 +2,7 @@
 
 This is a small Sphinx project with Lean 4 code, for testing with Alectryon.
 
-The Lean 4 file being tested is `LeanSource.ModularArithmeticTheory.lean`.  (This is a port of a Lean 3 file and it has some errors when compiled, because of the functionality gap in `ring` between Lean 3 and Lean 4.)
+The Lean 4 file being tested is `LeanSource.ModularArithmeticTheory.lean`.  (This is a port of a [Lean 3 file](https://hrmacbeth.github.io/math2001/03_Parity_and_Divisibility.html#modular-arithmetic-theory) and it has some errors when compiled, because of the functionality gap in `ring` between Lean 3 and Lean 4.)
 
 Running
 ```
