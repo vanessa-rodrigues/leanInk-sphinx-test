@@ -1,4 +1,4 @@
-import Mathlib.Init.Data.Int.Basic
+import Mathlib.Init.Data.Int.Order
 import Mathlib.Tactic.Have
 import Mathlib.Tactic.Contrapose
 
