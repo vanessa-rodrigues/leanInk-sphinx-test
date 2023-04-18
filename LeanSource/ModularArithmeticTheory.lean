@@ -88,9 +88,9 @@ lemma int.modeq.add {n a b c d : ℤ} (h1 : a ≡ b [ZMOD n])
   (h2 : c ≡ d [ZMOD n]) :
     a + c ≡ b + d [ZMOD n] := by
   dsimp [int.modeq] at *
-  cases' h1 with x hx
-  cases' h2 with y hy
-  use x + y
+  cases' h1 /- test comment 3-/ with x hx
+  cases' h2 with y hy /- test comment 2 -/ 
+  use x + y -- test comment 1
   calc a + c - (b + d) = (a - b) + (c - d) := by ring
     _ = n * x + n * y := by rw [hx, hy]
     _ = n * (x + y) := by ring
@@ -334,11 +334,11 @@ example {a b : ℤ} (ha : a ≡ 2 [ZMOD 4]) :
   apply int.modeq.add
   . apply int.modeq.add
     . apply int.modeq.mul
-      . apply ha
+      . apply ha -- test other comment
       . apply int.modeq.refl
     . apply int.modeq.mul
       . apply int.modeq.pow
-        apply ha
+        apply ha 
       . apply int.modeq.refl
   . apply int.modeq.refl
 

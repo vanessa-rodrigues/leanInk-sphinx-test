@@ -82,9 +82,9 @@ Example
       (h2 : c ≡ d [ZMOD n]) :
         a + c ≡ b + d [ZMOD n] := by
       dsimp [int.modeq] at *
-      cases' h1 with x hx
-      cases' h2 with y hy
-      use x + y
+      cases' h1 /- test comment 3 -/ with x hx
+      cases' h2 with y hy /- test comment 2 -/ 
+      use x + y -- test comment 1
       calc a + c - (b + d) = (a - b) + (c - d) := by ring
         _ = n * x + n * y := by rw [hx, hy]
         _ = n * (x + y) := by ring
@@ -187,8 +187,8 @@ Notice that here we're using the test for non-divisibility from
      use 10, 18, 2, 6
      constructor
      . use -2
-     constructor
-     . use -1
+     constructor 
+     . use -1 
      apply int.not_dvd_of_exists_lt_and_lt
      . norm_num
      use 0
@@ -307,8 +307,8 @@ in the right order.  This requires much less thinking:
        ≡ 2 * b ^ 2 + 2 ^ 2 * b + 3 [ZMOD 4] := by
      apply int.modeq.add
      . apply int.modeq.add
-       . apply int.modeq.mul
-         . apply ha
+       . apply int.modeq.mul /- test comment 1 -/ 
+         . apply ha -- test comment 2
          . apply int.modeq.refl
        . apply int.modeq.mul
          . apply int.modeq.pow

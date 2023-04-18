@@ -33,8 +33,11 @@ extensions = ["alectryon.sphinx"]
 
 import alectryon.docutils
 alectryon.docutils.CACHE_DIRECTORY = "_build/alectryon/"
+alectryon.docutils.AlectryonTransform.DRIVER_ARGS['leanInk'] = \
+    ['--verbose', '--lake', 'lakefile.lean', '--x-disable-sorry-info', '--x-disable-calc-info']
 # alectryon.docutils.setup("lean4")
 
+default_role = 'lean4'
 
 highlight_language = "lean"
 
